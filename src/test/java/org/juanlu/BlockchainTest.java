@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class BlockChainTest
+public class BlockchainTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class BlockChainTest
      *
      * @param testName name of the test case
      */
-    public BlockChainTest(String testName )
+    public BlockchainTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class BlockChainTest
      */
     public static Test suite()
     {
-        return new TestSuite( BlockChainTest.class );
+        return new TestSuite( BlockchainTest.class );
     }
 
     /**
