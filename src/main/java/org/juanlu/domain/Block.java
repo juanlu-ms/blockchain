@@ -11,7 +11,7 @@ public class Block {
     private final String data;
     private final long timestamp;
 
-    public Block(String previousHash, String data) {
+    public Block(String data, String previousHash) {
         this.previousHash = previousHash;
         this.data = data;
         this.timestamp = new Date().getTime();
