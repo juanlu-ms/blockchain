@@ -19,6 +19,7 @@ public class Block {
         this.hash = calculateHash();
     }
 
+    // Applies SHA256 to a String and returns the result
     public String calculateHash() {
         return StringUtil.applySha256(
                 previousHash
@@ -27,6 +28,7 @@ public class Block {
                         + nonce);
     }
 
+    // Increases nonce value until hash target is reached
     public void mineBlock(int difficulty) {
         String target = new String(new char[difficulty]).replace('\0', '0');
         while (!hash.substring(0, difficulty).equals(target)) {
@@ -42,13 +44,5 @@ public class Block {
 
     public String getPreviousHash() {
         return previousHash;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public long getTimestamp() {
-        return timestamp;
     }
 }
