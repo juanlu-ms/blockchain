@@ -1,19 +1,15 @@
 package org.juanlu;
 
 import org.juanlu.service.BlockchainService;
-import org.juanlu.service.BlockchainServiceImp;
 
 public class Blockchain {
 
-
     public static void main(String[] args) {
-        BlockchainService blockChainService = BlockchainServiceImp.getInstance();
+        BlockchainService.getInstance().addBlock("Hi im the first block");
+        BlockchainService.getInstance().addBlock("Yo im the second block");
+        BlockchainService.getInstance().addBlock("Hey im the third block");
 
-        blockChainService.addBlock("Hi im the first block");
-        blockChainService.addBlock("Yo im the second block");
-        blockChainService.addBlock("Hey im the third block");
-
-        System.out.println(blockChainService.getBlockchainJson());
+        System.out.println(BlockchainService.getInstance().getBlockchainJson());
 
     }
 }
